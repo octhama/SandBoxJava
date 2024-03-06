@@ -11,6 +11,8 @@ public class Pizza {
     public String garniture;
     public String sauce;
     public String fromage;
+    public String garniture3;
+    public String fromage2;
 
     public Pizza(String pate, String garniture, String sauce, String fromage) {
         this.pate = pate;
@@ -19,10 +21,25 @@ public class Pizza {
         this.fromage = fromage;
     }
 
-    public Pizza(Pate pate, Sauce sauce, Garniture garniture) {
+
+    public Pizza(Pate pate, Sauce sauce, Garniture garniture, Fromage fromage) {
         this.pate = pate.description;
         this.garniture = garniture.description;
         this.sauce = sauce.description;
-        this.fromage = garniture.description;
+        this.fromage = fromage.description;
+    }
+
+    public Pizza(Pate pate, Sauce sauce, Garniture garniture, Fromage fromage, Fromage fromage2) {
+        this.pate = pate.description;
+        this.garniture = garniture.description;
+        this.sauce = sauce.description;
+        this.fromage = fromage.description + " et " + fromage2.description;
+    }
+
+    public Pizza(Pate pate, Sauce sauce, Garniture garniture, Garniture garniture3, Fromage fromage, Fromage fromage2) {
+        this.pate = pate.description;
+        this.garniture = garniture.description + " et " + garniture3.description;
+        this.sauce = sauce.description;
+        this.fromage = fromage.description + " et " + fromage2.description;
     }
 }
