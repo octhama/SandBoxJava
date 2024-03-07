@@ -5,41 +5,90 @@
  * 3) la sauce (idem)
  * 4) le fromage (idem)
  */
-public class Pizza {
+public class Pizza implements IPizza{
 
-    public String pate;
-    public String garniture;
-    public String sauce;
-    public String fromage;
-    public String garniture3;
-    public String fromage2;
+    public EPate pate;
+    public ESauce sauce;
+    public EGarniture garniture;
+    public EFromage fromage;
+    public EPrixPizza PrixPizza;
 
-    public Pizza(String pate, String garniture, String sauce, String fromage) {
+    public Pizza(EPate pate, ESauce sauce, EGarniture garniture, EFromage fromage, EPrixPizza PrixPizza) {
         this.pate = pate;
-        this.garniture = garniture;
         this.sauce = sauce;
+        this.garniture = garniture;
         this.fromage = fromage;
+        this.PrixPizza = PrixPizza;
     }
 
+    public Pizza() {
 
-    public Pizza(Pate pate, Sauce sauce, Garniture garniture, Fromage fromage) {
-        this.pate = pate.description;
-        this.garniture = garniture.description;
-        this.sauce = sauce.description;
-        this.fromage = fromage.description;
     }
 
-    public Pizza(Pate pate, Sauce sauce, Garniture garniture, Fromage fromage, Fromage fromage2) {
-        this.pate = pate.description;
-        this.garniture = garniture.description;
-        this.sauce = sauce.description;
-        this.fromage = fromage.description + " et " + fromage2.description;
+    @Override
+    public void create() {
+        System.out.println("Pizza{" +
+                "pate=" + pate +
+                ", sauce=" + sauce +
+                ", garniture=" + garniture +
+                ", fromage=" + fromage +
+                ", PrixPizza=" + PrixPizza +
+                '}');
     }
 
-    public Pizza(Pate pate, Sauce sauce, Garniture garniture, Garniture garniture3, Fromage fromage, Fromage fromage2) {
-        this.pate = pate.description;
-        this.garniture = garniture.description + " et " + garniture3.description;
-        this.sauce = sauce.description;
-        this.fromage = fromage.description + " et " + fromage2.description;
+    @Override
+    public void setPate(EPate pate) {
+        this.pate = pate;
+
+    }
+
+    @Override
+    public void setSauce(ESauce sauce) {
+
+    }
+
+    @Override
+    public void setGarniture(EGarniture garniture) {
+
+    }
+
+    @Override
+    public void setFromage(EFromage fromage) {
+
+    }
+
+    @Override
+    public void setPrixPizza(EPrixPizza prixPizza) {
+
+    }
+
+    @Override
+    public EPate getPate() {
+        return null;
+    }
+
+    @Override
+    public ESauce getSauce() {
+        return null;
+    }
+
+    @Override
+    public EGarniture getGarniture() {
+        return null;
+    }
+
+    @Override
+    public EFromage getFromage() {
+        return null;
+    }
+
+    @Override
+    public EPrixPizza getPrixPizza() {
+        return null;
+    }
+
+    @Override
+    public void setAll(EPate pate, ESauce sauce, EGarniture garniture, EFromage fromage, EPrixPizza prixPizza) {
+        IPizza.super.setAll(pate, sauce, garniture, fromage, prixPizza);
     }
 }
