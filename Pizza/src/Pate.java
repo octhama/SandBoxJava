@@ -9,6 +9,19 @@ public class Pate {
         this.description = description;
     }
 
+    public EPate getTypedepate() {
+        return typedepate;
+    }
+
+    public void setTypedepate(EPate typedepate) {
+        this.typedepate = typedepate;
+    }
+    public void setPate(Pate pate) {
+        this.typedepate = pate.typedepate;
+        this.prix = pate.prix;
+        this.description = pate.description;
+    }
+
     public double getPrix() {
         return prix;
     }

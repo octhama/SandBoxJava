@@ -2,5 +2,5 @@ public enum EPate {
     FINE,
     EPAISSE,
     COMPLETE,
-    Fine, SANSGLUTEN
+    Fine, PAN, SANSGLUTEN
 }

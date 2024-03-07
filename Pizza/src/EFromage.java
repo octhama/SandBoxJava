@@ -4,5 +4,5 @@ public enum EFromage {
     CHEDDAR,
     CHEVRE,
     PARMESAN,
-    Emmental, Roquefort, EmmentalSANS
+    Emmental, Roquefort, ITALIEN, ROQUEFORT, EmmentalSANS
 }

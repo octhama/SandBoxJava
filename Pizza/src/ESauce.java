@@ -1,5 +1,5 @@
 public enum ESauce {
     TOMATE,
     CREME,
-    Tomate, PESTO, BBQ,
+    Tomate, PESTO, BBQ, SANSGLUTEN,
 }

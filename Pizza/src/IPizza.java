@@ -19,4 +19,11 @@ public interface IPizza {
         setFromage(fromage);
         setPrixPizza(prixPizza);
     }
+
+    void setPate(Pate pateFine);
+
+    void setSauce(Sauce sauceSansGluten);
+
+    void setPrixPizza(PrixPizza prixMoyen);
+
 }

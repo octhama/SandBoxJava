@@ -7,5 +7,5 @@ public enum EGarniture {
     TOMATE,
     MOZZARELLA,
     SALADE,
-    Mozzarella, PEPERONNI
+    Mozzarella, ITALIEN, OLIVES, LARDONS, PEPERONNI
 }

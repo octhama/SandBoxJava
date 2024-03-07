@@ -22,73 +22,63 @@ public class Pizza implements IPizza{
     }
 
     public Pizza() {
-
     }
 
-    @Override
     public void create() {
-        System.out.println("Pizza{" +
-                "pate=" + pate +
-                ", sauce=" + sauce +
-                ", garniture=" + garniture +
-                ", fromage=" + fromage +
-                ", PrixPizza=" + PrixPizza +
-                '}');
+        System.out.println("Pizza préparée avec : " + "une pâte " + pate + ", une sauce " + sauce + ", une garniture " + garniture + ", un fromage " + fromage + " et qui coûte " + PrixPizza);
     }
 
-    @Override
+    public EPate getPate() {
+        return pate;
+    }
+
+    public ESauce getSauce() {
+        return sauce;
+    }
+
+    public EGarniture getGarniture() {
+        return garniture;
+    }
+
+    public EFromage getFromage() {
+        return fromage;
+    }
+
+    public EPrixPizza getPrixPizza() {
+        return PrixPizza;
+    }
+
+
     public void setPate(EPate pate) {
         this.pate = pate;
-
     }
 
-    @Override
     public void setSauce(ESauce sauce) {
-
+        this.sauce = sauce;
     }
 
-    @Override
     public void setGarniture(EGarniture garniture) {
-
+        this.garniture = garniture;
     }
 
-    @Override
     public void setFromage(EFromage fromage) {
+        this.fromage = fromage;
+    }
 
+    public void setPrixPizza(EPrixPizza PrixPizza) {
+        this.PrixPizza = PrixPizza;
+    }
+
+    public void setPate(Pate pateFine) {
+        this.pate = pate;
     }
 
     @Override
-    public void setPrixPizza(EPrixPizza prixPizza) {
-
+    public void setSauce(Sauce sauceSansGluten) {
+        this.sauce = sauce;
     }
 
-    @Override
-    public EPate getPate() {
-        return null;
-    }
-
-    @Override
-    public ESauce getSauce() {
-        return null;
-    }
-
-    @Override
-    public EGarniture getGarniture() {
-        return null;
-    }
-
-    @Override
-    public EFromage getFromage() {
-        return null;
-    }
-
-    @Override
-    public EPrixPizza getPrixPizza() {
-        return null;
-    }
-
-    @Override
-    public void setAll(EPate pate, ESauce sauce, EGarniture garniture, EFromage fromage, EPrixPizza prixPizza) {
-        IPizza.super.setAll(pate, sauce, garniture, fromage, prixPizza);
+    public void setPrixPizza(PrixPizza prixMoyen) {
+        this.PrixPizza = PrixPizza;
     }
 }
