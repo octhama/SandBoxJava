@@ -9,6 +9,7 @@ public enum EFromage {
     private String nom;
     private double prix;
     private String description;
+
     EFromage(String nom, double prix, String description) {
         this.nom = nom;
         this.prix = prix;

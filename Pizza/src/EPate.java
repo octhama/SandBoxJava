@@ -6,6 +6,7 @@ public enum EPate {
 
     public double prix;
     public String description;
+
     EPate(double prix, String description) {
         this.prix = prix;
         this.description = description;

@@ -6,6 +6,7 @@ public enum ESauce {
 
     private String typeSauce;
     private double prix;
+
     ESauce(String typeSauce, double prix) {
         this.typeSauce = typeSauce;
         this.prix = prix;

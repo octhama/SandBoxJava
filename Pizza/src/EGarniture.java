@@ -15,6 +15,7 @@ public enum EGarniture {
     private String nom;
     private double prix;
     private String description;
+
     EGarniture(String nom, double prix, String description) {
         this.nom = nom;
         this.prix = prix;

@@ -4,6 +4,7 @@ public enum EPrixPizza {
     GRANDE(11.5);
 
     public double prix;
+
     EPrixPizza(double prix) {
         this.prix = prix;
     }
