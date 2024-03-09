@@ -132,6 +132,8 @@ public class Pizza implements IPizza{
 
     @Override
     public void setPrixPizza(PrixPizza prixMoyen) {
+
         this.PrixPizza = PrixPizza;
+
     }
 }
