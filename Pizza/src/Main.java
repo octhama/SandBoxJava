@@ -1,6 +1,10 @@
 public class Main {
     public static void main(String[] args) {
-       Pizza pizza = new Pizza();
+         System.out.println("LISTE DES PIZZAS PREPAREES");
+
+         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+         Pizza pizza = new Pizza();
             pizza.setPate(new Pate(EPate.EPAISSE).getTypedepate());
             pizza.setSauce(new Sauce(ESauce.TOMATE).getTypeSauce());
             pizza.setGarniture(new Garniture(EGarniture.MOZZARELLA).getNom());
@@ -9,9 +13,13 @@ public class Main {
             pizza.create();
             System.out.println(pizza);
 
-            PizzaMargarrita pizzaMargarrita = new PizzaMargarrita(EPate.COMPLETE, ESauce.TOMATE, EGarniture.PEPERONNI, EFromage.ROQUEFORT, EPrixPizza.MOYENNE);
+            System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+
+            PizzaMargarrita pizzaMargarrita = new PizzaMargarrita(EPate.COMPLETE, ESauce.TOMATE, EGarniture.PEPERONNI, EFromage.ROQUEFORT, EPrixPizza.GRANDE);
             pizzaMargarrita.create();
             System.out.println(pizzaMargarrita);
+
+            System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
 
             Pizza4QuatreFromage pizza4QuatreFromage = new Pizza4QuatreFromage(EPate.FINE, ESauce.TOMATE, EGarniture.PEPERONNI, EFromage.EMMENTALER, EFromage.MOZZARELLA, EFromage.CHEVRE, EFromage.CHEDDAR, EPrixPizza.MOYENNE);
             pizza4QuatreFromage.create();
