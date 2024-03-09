@@ -3,34 +3,19 @@ public class Garniture {
     public double prix;
     public String description;
 
-    public Garniture(EGarniture nom, double prix, String description) {
-        this.nom = nom;
-        this.prix = prix;
-        this.description = description;
+    public Garniture(EGarniture eGarniture) {
+        this.nom = eGarniture;
+        this.prix = 0.0;
+        this.description = "";
     }
 
     public EGarniture getNom() {
+
         return nom;
     }
-
-    public double getPrix() {
-        return prix;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setNom(EGarniture nom) {
-        this.nom = nom;
-    }
-
-    public void setPrix(double prix) {
-        this.prix = prix;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    @Override
+    public String toString() {
+        return "Garniture [nom=" + nom + ", prix=" + prix + ", description=" + description + "]";
     }
 
 }

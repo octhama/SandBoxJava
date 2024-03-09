@@ -1,12 +1,8 @@
 public class PrixPizza {
     public EPrixPizza typePrix;
-    public double prix;
-    public String description;
 
-    public PrixPizza(EPrixPizza typePrix, double prix, String description) {
+    public PrixPizza(EPrixPizza typePrix) {
         this.typePrix = typePrix;
-        this.prix = prix;
-        this.description = description;
     }
 
     public EPrixPizza getTypePrix() {
@@ -17,23 +13,29 @@ public class PrixPizza {
         this.typePrix = typePrix;
     }
 
+    @Override
+    public String toString() {
+        return typePrix.toString();
+    }
+
+    public void setPrixPizza(EPrixPizza typePrix) {
+        this.typePrix = typePrix;
+    }
+
+    public void setPrixPizza(PrixPizza typePrix) {
+        this.typePrix = typePrix.typePrix;
+    }
+
+    public double getPrixPizza() {
+        return typePrix.getPrix();
+    }
+
     public double getPrix() {
-        return prix;
+        return typePrix.getPrix();
     }
 
     public void setPrix(double prix) {
-        this.prix = prix;
+        typePrix.setPrix(prix);
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String toString() {
-        return "PrixPizza [description=" + description + ", prix=" + prix + ", typePrix=" + typePrix + "]";
-    }
 }

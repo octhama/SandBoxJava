@@ -25,5 +25,4 @@ public interface IPizza {
     void setSauce(Sauce sauceSansGluten);
 
     void setPrixPizza(PrixPizza prixMoyen);
-
 }

@@ -3,39 +3,19 @@ public class Pate {
     public double prix;
     public String description;
 
-    public Pate(EPate typedepate, double prix, String description) {
-        this.typedepate = typedepate;
-        this.prix = prix;
-        this.description = description;
+    public Pate(EPate ePate) {
+        this.typedepate = ePate;
+        this.prix = 0.0;
+        this.description = "";
     }
 
     public EPate getTypedepate() {
         return typedepate;
     }
 
-    public void setTypedepate(EPate typedepate) {
-        this.typedepate = typedepate;
-    }
-    public void setPate(Pate pate) {
-        this.typedepate = pate.typedepate;
-        this.prix = pate.prix;
-        this.description = pate.description;
-    }
-
-    public double getPrix() {
-        return prix;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setPrix(double prix) {
-        this.prix = prix;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+    @Override
+    public String toString() {
+        return "Pate{" + "typedepate=" + typedepate + ", prix=" + prix + ", description=" + description + '}';
     }
 
 }

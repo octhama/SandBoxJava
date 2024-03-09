@@ -9,6 +9,12 @@ public class Sauce {
         this.description = description;
     }
 
+    public Sauce(ESauce eSauce) {
+        this.typeSauce = eSauce;
+        this.prix = 0.0;
+        this.description = "";
+    }
+
     public ESauce getTypeSauce() {
         return typeSauce;
     }
