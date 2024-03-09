@@ -8,8 +8,8 @@ public class Pate {
         this.prix = 0.0;
         this.description = "";
     }
-
     public EPate getTypedepate() {
+
         return typedepate;
     }
 

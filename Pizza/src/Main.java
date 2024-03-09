@@ -1,8 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-         System.out.println("LISTE DES PIZZAS PREPAREES");
 
-         System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+         System.out.println("LISTE DES PIZZAS PREPAREES");
 
          Pizza pizza = new Pizza();
             pizza.setPate(new Pate(EPate.EPAISSE).getTypedepate());
@@ -10,19 +9,25 @@ public class Main {
             pizza.setGarniture(new Garniture(EGarniture.MOZZARELLA).getNom());
             pizza.setFromage(new Fromage(EFromage.ROQUEFORT).getTypefromage());
             pizza.setPrixPizza(new PrixPizza(EPrixPizza.GRANDE).getTypePrix());
-            pizza.create();
+            pizza.preparerLaPizza();
             System.out.println(pizza);
 
-            System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        Pizza pizza1 = new Pizza();
+            pizza1.setPate(new Pate(EPate.SANSGLUTEN).getTypedepate());
+            pizza1.setSauce(new Sauce(ESauce.BBQ).getTypeSauce());
+            pizza1.setGarniture(new Garniture(EGarniture.LARDONS).getNom());
+            pizza1.setFromage(new Fromage(EFromage.MOZZARELLA).getTypefromage());
+            pizza1.setPrixPizza(new PrixPizza(EPrixPizza.MOYENNE).getTypePrix());
+            pizza1.preparerLaPizza();
+            System.out.println(pizza1);
 
-            PizzaMargarrita pizzaMargarrita = new PizzaMargarrita(EPate.COMPLETE, ESauce.TOMATE, EGarniture.PEPERONNI, EFromage.ROQUEFORT, EPrixPizza.GRANDE);
-            pizzaMargarrita.create();
+            PizzaMargarrita pizzaMargarrita = new PizzaMargarrita(EPate.COMPLETE, ESauce.TOMATE, EGarniture.PEPERONNI, EFromage.MOZZARELLA, EPrixPizza.GRANDE);
+            pizzaMargarrita.preparerLaPizza();
             System.out.println(pizzaMargarrita);
 
-            System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
-
             Pizza4QuatreFromage pizza4QuatreFromage = new Pizza4QuatreFromage(EPate.FINE, ESauce.TOMATE, EGarniture.PEPERONNI, EFromage.EMMENTALER, EFromage.MOZZARELLA, EFromage.CHEVRE, EFromage.CHEDDAR, EPrixPizza.MOYENNE);
-            pizza4QuatreFromage.create();
+            pizza4QuatreFromage.preparerLaPizza();
             System.out.println(pizza4QuatreFromage);
+
     }
 }

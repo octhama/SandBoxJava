@@ -2,7 +2,8 @@ public enum ESauce {
     TOMATE("Sauce tomate", 2.0),
     CREME("Sauce creme", 2.0),
     PESTO("Sauce pesto", 2.0),
-    BBQ("Sauce BBQ", 2.0);
+    BBQ("Sauce BBQ", 2.0),
+    SaucePiquante("Sauce piquante", 2.0),;
 
     private String typeSauce;
     private double prix;

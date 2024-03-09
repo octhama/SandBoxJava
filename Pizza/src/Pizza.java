@@ -6,10 +6,12 @@
  * 4) le fromage (idem)
  */
 public class Pizza implements IPizza{
-
     public EPate pate;
     public ESauce sauce;
     public ESauce sauce2;
+    public ESauce sauce3;
+    public ESauce sauce4;
+    public ESauce sauce5;
     public EGarniture garniture;
     public EGarniture garniture2;
     public EGarniture garniture3;
@@ -43,9 +45,7 @@ public class Pizza implements IPizza{
         this.PrixPizza = PrixPizza;
     }
 
-    public void create() {
-        System.out.println("Pizza préparée avec : " + "une pâte " + pate + ", une sauce " + sauce + ", une garniture " + garniture + ", un fromage " + fromage + " et qui coûte " + PrixPizza);
-    }
+
 
     public EPate getPate() {
 
@@ -74,6 +74,29 @@ public class Pizza implements IPizza{
     @Override
     public void setPate(Pate pateFine) {
 
+    }
+
+    @Override
+    public void preparerLaPizza() {
+        System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("Préparation de la pizza en cours...");
+        //timer
+        System.out.println("Pizza en préparation...");
+        try {
+            Thread.sleep(5000);
+            //decompte de 5 secondes
+            for (int i = 5; i > 0; i--) {
+                // affiche le décompte en pointillé uniquement
+                System.out.print(".");
+                // pause de 1 seconde
+                Thread.sleep(1000);
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Pizza préparée avec : " + "une pâte " + pate + ", une sauce " + sauce + ", une garniture " + garniture + ", un fromage " + fromage + " et qui coûte " + PrixPizza);
+        System.out.println("Pizza prête !");
+        System.out.println("-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------");
     }
 
     public void setPate(EPate pate) {

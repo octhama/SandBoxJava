@@ -1,5 +1,5 @@
 public interface IPizza {
-    void create();
+    void preparerLaPizza();
     void setPate(EPate pate);
     void setSauce(ESauce sauce);
     void setGarniture(EGarniture garniture);
@@ -18,6 +18,34 @@ public interface IPizza {
         setGarniture(garniture);
         setFromage(fromage);
         setPrixPizza(prixPizza);
+    }
+
+    default void setAll(EPate pate, ESauce sauce, EGarniture garniture, EFromage fromage, EFromage fromage2, EFromage fromage3, EFromage fromage4, EPrixPizza prixPizza) {
+        setPate(pate);
+        setSauce(sauce);
+        setGarniture(garniture);
+        setFromage(fromage);
+        setPrixPizza(prixPizza);
+    }
+
+    default void setAll(EPate pate, ESauce sauce, EGarniture garniture, EFromage fromage, EFromage fromage2, EFromage fromage3, EFromage fromage4, EFromage fromage5, EPrixPizza prixPizza) {
+        setPate(pate);
+        setSauce(sauce);
+        setGarniture(garniture);
+        setFromage(fromage);
+        setPrixPizza(prixPizza);
+    }
+
+    default void pizzaOrdinaire() {
+        System.out.println("Préparation de la pizza en cours...");
+        System.out.println("Pizza en préparation...");
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.println("Pizza préparée avec : " + "une pâte " + getPate() + ", une sauce " + getSauce() + ", une garniture " + getGarniture() + ", un fromage " + getFromage() + " et qui coûte " + getPrixPizza());
+        System.out.println("Pizza prête !");
     }
 
     void setPate(Pate pateFine);
